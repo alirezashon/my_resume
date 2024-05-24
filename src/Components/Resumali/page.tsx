@@ -1,8 +1,34 @@
-//useclient
+"use client"
 import Image from "next/image"
 import styles from "./index.module.css"
-import { FaBook, FaMapMarkedAlt, FaWalking } from "react-icons/fa"
+import {
+  FaBook,
+  FaChrome,
+  FaLaptopCode,
+  FaLinkedin,
+  FaMailBulk,
+  FaMapMarkedAlt,
+  FaPhone,
+  FaWalking,
+} from "react-icons/fa"
+import { useEffect, useRef } from "react"
+import { Chart } from "chart.js/auto"
+import { doughnutConfig, lineConfig } from "../Chart/config"
 const Resumali = () => {
+  const doughnutRef = useRef<HTMLCanvasElement>(null)
+  const lineRef = useRef<HTMLCanvasElement>(null)
+  useEffect(() => {
+    const doughnutCTX = doughnutRef.current?.getContext("2d")
+    const lineCTX = lineRef.current?.getContext("2d")
+    if (!doughnutCTX || !lineCTX) return
+    const doughnutChart = new Chart(doughnutCTX, doughnutConfig)
+    const lineChart = new Chart(lineCTX, lineConfig)
+
+    return () => {
+      doughnutChart.destroy()
+      lineChart.destroy()
+    }
+  }, [])
   return (
     <>
       <div className={styles.container}>
@@ -10,57 +36,87 @@ const Resumali = () => {
           <h1>علیرضا اکبری</h1>
           <h6>فول استک جاوا اسکریپت</h6>
         </div>
-          <Image
+        <Image
           className={styles.akbarimage}
-            src={"/akbariovich.jpg"}
-            alt='Alireza Akbari (web-developer[react,node,next,nest,go,python].include(dev))'
-            width={333}
-            height={333}
-          />
-
+          src={"/akbariovich.jpg"}
+          alt='Alireza Akbari (web-developer[react,node,next,nest,go,python].include(dev))'
+          width={333}
+          height={333}
+        />
         <div className={styles.body}>
           <div className={styles.expirence}>
             <h1>توسعه دهنده وب</h1>
-            <h1 className={styles.years}><p>Years</p>2 </h1>
-            <h3>work experience as a support and software developer</h3>
-            <FaMapMarkedAlt className={styles.mapo}/>
-            <h2>Live in Tehran Since 2001</h2>
+            <h2 className={styles.years} style={{ fontSize: "4vh" }}>
+              <p>سال</p>2
+            </h2>
+            <h3>
+              کارشناس طرح و توسعه سامانه های فناوری اطالعات در سازمان مبین نت
+              تجربه کار با جیرا و پیاده سازی فرآیند های کسب و کار توسعه فردی
+              میان افزار آشنایی با مانیتورینگ و پروتکل های شبکه
+            </h3>
+            <FaMapMarkedAlt size={"6vh"} className={styles.icon} />
+            <h3>متولد و ساکن تهران</h3>
           </div>
           <div className={styles.personal}>
-            <h1>PERSONAL</h1>
+            <h1>شخصیت شناسی</h1>
             <p>
-              I have a powerful and creative mind and I always ready for any
-              requirement. Despite having an introverted personality, I’m
-              humorous and can be happy alone. I have a creative mindset and in
-              the future, I will become a good writer with more experience
+              من ذهن توانمند و خلاقی دارم و همیشه برای هر نیازمندی آماده
+              هستم.نویسنده خوبی هستم. ورزش و پیاده روی را دوست دارم. آشنایی با
+              تکنولوژی های جدید ، ابزار ها و زبان ها و ساختارها برایم لذت بخش
+              است.
             </p>
-            <FaWalking />
-            <FaBook />
+            <div className={styles.personalIcons}>
+              <FaBook size={"4vh"} className={styles.icon} />
+              <FaLaptopCode size={"4vh"} className={styles.icon} />
+              <FaWalking size={"4vh"} className={styles.icon} />
+            </div>
           </div>
           <div className={styles.contact}>
-            Email: akbariovich@gmail.com Website https://akbariovich.ir Phone
-            09332343466 LinkedIn lihttps://www.linkedin.com/in/
-            alireza-akbari-21a318250/
-            https://objkt.com/users/tz1cSMYy1QmsGedZezt7dE7jp sRmAqHPYEDF
+            <div className={styles.contactRow}>
+              ایمیل
+              <FaMailBulk size={"4vh"} className={styles.icon} />
+              akbariovich@gmail.com
+            </div>
+            <div className={styles.contactRow}>
+              وب
+              <FaChrome size={"4vh"} className={styles.icon} />
+              https://akbariovich.ir
+            </div>
+            <div className={styles.contactRow}>
+              تلفن
+              <FaPhone size={"4vh"} className={styles.icon} />
+              09332343466
+            </div>
+            <div className={styles.contactRow}>
+              لینکدین
+              <FaLinkedin size={"4vh"} className={styles.icon} />
+              lihttps://www.linkedin.com/in/ alireza-akbari-21a318250/
+              https://objkt.com/users/tz1cSMYy1QmsGedZezt7dE7jp sRmAqHPYEDF
+            </div>
           </div>
           <div className={styles.ShortBio}>
-            <h1>Short Bio</h1>
+            <h1>بیوگرافی</h1>
             <p>
-              Two years of work experience as a network technician in the field
-              of creating and supporting private network connections. I talented
-              in coding and I love JS. I like meeting new technologies ,
-              Traading and marketing. I’m looking for a new position as my job
-              in developing web apps. I met with many things and I can learn any
-              thing that I want .
+              دو سال سابقه کار به عنوان تکنسین شبکه در زمینه ایجاد و پشتیبانی از
+              شبکه خصوصی. عالقه مند به نرم افزار و توسعه وب اپلیکیشن و توانمند
+              در اسکریپت نویسی مشتاق یادگیری و پیشرفت علمی تجربه کار با نرم
+              افزار های سازمانی پشتیبانی از سرویس های عملیات بهینه سازی و بهبود
+              کد
             </p>
           </div>
           <div className={styles.Education}>
-            2021 School Iranian Software Engineering 2019 Studying at Shamsipor
-            Information technology 2016 Studying at School computer
+            1401 دانشگاه ایرانیان Software Engineering 1399 دانشگاه شمسی پور
+            Information technology
           </div>
-          <div className={styles.Expertise}></div>
+          <div className={styles.Expertise}>
+            <h3>مهارت های من</h3>
+            <canvas className={styles.charto} ref={lineRef} />
+          </div>
           <div className={styles.SoftwareSkills}>
-            <h1>Software Skills</h1>
+            <h2>توانمندی در زبان های برنامه نویسی</h2>
+            <div className={styles.charto}>
+              <canvas className={styles.charto} ref={doughnutRef} />
+            </div>
           </div>
           <div className={styles.remote}>
             <h2>Can Remote work</h2>
