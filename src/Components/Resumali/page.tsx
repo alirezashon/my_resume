@@ -1,14 +1,14 @@
+//useclient
 import Image from "next/image"
 import styles from "./index.module.css"
 import { FaBook, FaMapMarkedAlt, FaWalking } from "react-icons/fa"
-
 const Resumali = () => {
   return (
     <>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h1>Alireza Akbari</h1>
-          <h6>Full Stack Developer</h6>
+          <h1>علیرضا اکبری</h1>
+          <h6>فول استک جاوا اسکریپت</h6>
         </div>
           <Image
           className={styles.akbarimage}
@@ -20,10 +20,10 @@ const Resumali = () => {
 
         <div className={styles.body}>
           <div className={styles.expirence}>
-            <h1>Web developer</h1>
-            <h1>2 Years</h1>
-            <h6>work experience as a support and software developer</h6>
-            <FaMapMarkedAlt />
+            <h1>توسعه دهنده وب</h1>
+            <h1 className={styles.years}><p>Years</p>2 </h1>
+            <h3>work experience as a support and software developer</h3>
+            <FaMapMarkedAlt className={styles.mapo}/>
             <h2>Live in Tehran Since 2001</h2>
           </div>
           <div className={styles.personal}>

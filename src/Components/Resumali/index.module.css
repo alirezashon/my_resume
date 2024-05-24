@@ -1,13 +1,18 @@
 .container {
   width: 100%;
+  margin-top: -3vh;
 }
 .header {
   background-color: yellow;
   text-align: center;
-  line-height: 5vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  height: 12vh;
+  color: rgb(255, 60, 0);
 }
 .akbarimage {
-  position: absolute;
+  position:absolute;
   top: 1vh;
   left: 1vw;
   width: 21vh;
@@ -18,56 +23,76 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
-  gap: 10px;
+  gap: 3px;
   background-color: rgb(3, 16, 15);
   color: white;
-  padding: 20px;
+  padding: 7vh 1vh 1vh 1vh;
+  height: 140vh;
+}
+.body div{
+  padding: 10px;
+  background-color: rgb(2, 31, 31);
 }
 .expirence {
-  grid-column: 1 / span 2;
-  grid-row: 2 / span 4;
-  background-color: aqua;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-wrap: nowrap;
+  font-size: xx-small;
+  grid-column: span 2;
+  grid-row: 1 / span 8;
+}
+.expirence h1 {
+  margin-top: 4vh;
+}
+.years {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: baseline;
+  font-size: 5vh;
+  color: yellow;
+}
+.years p {
+transform: rotate(90deg);
+}
+.mapo{
+  font-size: 6vh ;
+  color: yellow;
 }
 .personal {
-  grid-column: 1 / span 2;
-  grid-row: 6 / span 2;
-  background-color: lightcoral;
-  padding: 10px;
+  grid-column: span 2;
+  grid-row: 9 / span 4;
+  
 }
 .contact {
   grid-column: 3 / span 4;
-  grid-row: 2 / span 2;
-  background-color: lightgreen;
-  padding: 10px;
+  grid-row: 1 /span 4;
+  
 }
 .ShortBio {
   grid-column: 3 / span 4;
-  grid-row: 4 / span 2;
-  background-color: lightblue;
-  padding: 10px;
+  grid-row: 5 / span 4;
+  
 }
 .Education {
   grid-column: 3 / span 4;
-  grid-row:6 / span 2;
-  background-color: lightgray;
-  padding: 10px;
+  grid-row: 9 / span 4;
+  
 }
 .Expertise {
   grid-column: 7 / span 6;
-  grid-row: 5 / span 1;
-  background-color: lightpink;
-  padding: 10px;
+  grid-row: span 4;
+  
 }
 .SoftwareSkills {
-  grid-column: 1 / span 12;
-  grid-row: 8 / span 1;
-  background-color: lightgoldenrodyellow;
-  padding: 10px;
+  grid-column: 7 / span 6;
+  grid-row: 5 / span 4;
+  
 }
 .remote {
   grid-column: 7 / span 6;
-  grid-row: 6 / span 1;
-  background-color: lightseagreen;
-  padding: 10px;
+  grid-row: 9 / span 4;
+  
 }
