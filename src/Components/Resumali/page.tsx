@@ -23,7 +23,6 @@ const Resumali = () => {
     if (!doughnutCTX || !lineCTX) return
     const doughnutChart = new Chart(doughnutCTX, doughnutConfig)
     const lineChart = new Chart(lineCTX, lineConfig)
-
     return () => {
       doughnutChart.destroy()
       lineChart.destroy()
@@ -33,6 +32,7 @@ const Resumali = () => {
     <>
       <div className={styles.container}>
         <div className={styles.header}>
+          <p></p>
           <h1>علیرضا اکبری</h1>
           <h6>فول استک جاوا اسکریپت</h6>
         </div>
@@ -61,7 +61,8 @@ const Resumali = () => {
               به مدت
               <span className={styles.numbero}> 2 </span>
               سال
-            </div>            <li>تکنسین شبکه در پیمانکاری مبین نت</li>
+            </div>
+            <li>تکنسین شبکه در پیمانکاری مبین نت</li>
             <FaMapMarkedAlt size={"6vh"} className={styles.icon} />
             <h3>متولد و ساکن تهران</h3>
           </div>

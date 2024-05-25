@@ -4,12 +4,26 @@
 }
 .header {
   background-color: yellow;
-  text-align: center;
   display: flex;
   justify-content: space-around;
-  align-items: baseline;
-  height: 12vh;
+  align-items: center;
   color: rgb(255, 60, 0);
+}
+.header h1 {
+  color: #001d32;
+}
+.abilities {
+  display: flex;
+  justify-content: space-around;
+}
+.abilities h6 {
+  z-index: 1;
+}
+.abilityTypes {
+  width: 22vh;
+  height: 22vh;
+  position: absolute;
+  background-color: #001d32;
 }
 .akbarimage {
   position: absolute;
@@ -32,7 +46,6 @@
   gap: 3px;
   background-color: rgb(3, 16, 15);
   color: white;
-  height: 170vh;
   padding: 1vh;
 }
 .body div {
@@ -76,6 +89,7 @@
   color: yellow;
 }
 .personal {
+  padding: 1vh;
   grid-column: span 2;
   grid-row: 10 / span 8;
 }
@@ -173,4 +187,44 @@
 
 .numbero {
   font-family: Sans;
+}
+
+@media (max-width: 888px) {
+  .body div {
+    width: 100%;
+  }
+  .akbarimage {
+    width: 21vw;
+    height: 21vw;
+  }
+  .expirence {
+    grid-column: span 4;
+  }
+  .personal {
+    grid-column: span 4;
+  }
+  .ShortBio {
+    grid-column: 1 / span 12;
+    grid-row: 18 / span 4;
+  }
+  .contact {
+    grid-column: 1 / span 12;
+    grid-row: 24 / span 2;
+  }
+  .Education {
+    grid-column: 1 / span 12;
+    grid-row: 22 / span 2;
+  }
+  .Expertise {
+    grid-column: span 8;
+    grid-row: 1 / span 6;
+  }
+  .SoftwareSkills {
+    grid-column: span 8;
+    grid-row: 7 / span 7;
+  }
+  .remote {
+    grid-column: span 8;
+    grid-row: 14 / span 4;
+  }
 }
