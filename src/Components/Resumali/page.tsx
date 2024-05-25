@@ -73,25 +73,54 @@ const Resumali = () => {
           </div>
           <div className={styles.contact}>
             <div className={styles.contactRow}>
-              ایمیل
-              <FaMailBulk size={"4vh"} className={styles.icon} />
-              akbariovich@gmail.com
+              <p>
+                <a>
+                  ایمیل
+                  <FaMailBulk
+                    size={"4vh"}
+                    onClick={() =>
+                      navigator.clipboard.writeText("akbariovich@gmail.com")
+                    }
+                    className={styles.icon}
+                  />
+                </a>
+                akbariovich@gmail.com
+              </p>
             </div>
             <div className={styles.contactRow}>
-              وب
-              <FaChrome size={"4vh"} className={styles.icon} />
-              https://akbariovich.ir
+              <p
+                style={{ cursor: "pointer" }}
+                onClick={() => window.open("https://akbariovich.ir")}
+              >
+                <a>
+                  وب
+                  <FaChrome size={"4vh"} className={styles.icon} />
+                </a>
+                https://akbariovich.ir
+              </p>
             </div>
             <div className={styles.contactRow}>
-              تلفن
-              <FaPhone size={"4vh"} className={styles.icon} />
-              09332343466
-            </div>
-            <div className={styles.contactRow}>
-              لینکدین
-              <FaLinkedin size={"4vh"} className={styles.icon} />
-              lihttps://www.linkedin.com/in/ alireza-akbari-21a318250/
-              https://objkt.com/users/tz1cSMYy1QmsGedZezt7dE7jp sRmAqHPYEDF
+              <p
+                onClick={() =>
+                  window.open(
+                    "https://ir.linkedin.com/in/alireza-akbari-21a318250"
+                  )
+                }
+              >
+                تلفن
+                <FaPhone size={"4vh"} className={styles.icon} />
+                09332343466
+              </p>
+              <p
+                onClick={() =>
+                  window.open(
+                    "https://ir.linkedin.com/in/alireza-akbari-21a318250"
+                  )
+                }
+              >
+                لینکدین
+                <b /> <FaLinkedin size={"4vh"} className={styles.icon} />
+              </p>
             </div>
           </div>
           <div className={styles.ShortBio}>
@@ -110,7 +139,7 @@ const Resumali = () => {
           </div>
           <div className={styles.Expertise}>
             <h3>مهارت های من</h3>
-            <canvas className={styles.charto} ref={lineRef} />
+            <canvas className={styles.charto} ref={lineRef} height={"120%"} />
           </div>
           <div className={styles.SoftwareSkills}>
             <h2>توانمندی در زبان های برنامه نویسی</h2>
@@ -120,6 +149,7 @@ const Resumali = () => {
           </div>
           <div className={styles.remote}>
             <h2>Can Remote work</h2>
+            
           </div>
         </div>
       </div>

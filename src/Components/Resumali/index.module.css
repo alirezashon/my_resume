@@ -22,8 +22,8 @@
 .charto {
   width: 40vh;
   background: #e3f2fd;
-  border-radius: 3vh;
-  border: 0.4vh ridge #1976d2;
+  border-radius: 1vh;
+  border:.4vh double #19a4d2;
 }
 
 .body {
@@ -73,6 +73,7 @@
   transform: rotate(90deg);
 }
 .icon {
+  cursor: copy;
   color: yellow;
 }
 .personal {
@@ -85,14 +86,25 @@
 }
 .contact {
   grid-column: 3 / span 4;
-  grid-row: 1 / span 6;
+  grid-row: 1 / span 5;
+}
+.contactRow {
+  border-bottom: 0.3vh ridge #e3f2fd;
+}
+.contactRow p{
+display: flex;
+justify-content: space-around;
+}
+.contactRow:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .ShortBio {
   grid-column: 3 / span 4;
-  grid-row: 7 / span 6;
-
+  grid-row: 6 / span 7;
 }
-.ShortBio h1{
+.ShortBio h1 {
   background-color: yellow;
   color: #001d32;
   text-align: center;
