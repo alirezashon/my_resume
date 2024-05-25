@@ -134,8 +134,29 @@ const Resumali = () => {
             </p>
           </div>
           <div className={styles.Education}>
-            1401 دانشگاه ایرانیان Software Engineering 1399 دانشگاه شمسی پور
-            Information technology
+            <h1>تحصیلات</h1>
+            <p className={styles.numbero}>1401 - 1403</p>
+            <p>مهندسی نرم افزار در دانشگاه ایرانیان</p>
+            <Image
+              className={styles.educationImage}
+              src={"/iranian.png"}
+              onClick={() => window.open("https://iranian.ac.ir/")}
+              alt='دانشگاه ایرانیان رشته تحصیلی مهندسی نرم افزار - تحصیلات آکادمیک'
+              width={999}
+              height={333}
+            />
+            <p className={styles.numbero}>1399 - 1401</p>
+            <p>
+              فناوری اطلاعات در دانشگاه شمسی پور
+              <Image
+                className={styles.shamsImage}
+                src={"/shamsikhanom.png"}
+                onClick={() => window.open("https://shamsipour.tvu.ac.ir/")}
+                alt='دانشگاه شمسی پور رشته تحصیلی فناوری اطلاعات - تحصیلات آکادمیک'
+                width={999}
+                height={333}
+              />
+            </p>
           </div>
           <div className={styles.Expertise}>
             <h3>مهارت های من</h3>
@@ -149,7 +170,13 @@ const Resumali = () => {
           </div>
           <div className={styles.remote}>
             <h2>Can Remote work</h2>
-            
+            <Image
+              className={styles.worldImage}
+              src={"/world-map.jpg"}
+              alt='Alireza Akbari (web-developer[react,node,next,nest,go,python].include(dev))'
+              width={2222}
+              height={2221}
+            />
           </div>
         </div>
       </div>

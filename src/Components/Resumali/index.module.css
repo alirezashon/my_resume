@@ -23,7 +23,7 @@
   width: 40vh;
   background: #e3f2fd;
   border-radius: 1vh;
-  border:.4vh double #19a4d2;
+  border: 0.4vh double #19a4d2;
 }
 
 .body {
@@ -86,14 +86,14 @@
 }
 .contact {
   grid-column: 3 / span 4;
-  grid-row: 1 / span 5;
+  grid-row: 1 / span 4;
 }
 .contactRow {
   border-bottom: 0.3vh ridge #e3f2fd;
 }
-.contactRow p{
-display: flex;
-justify-content: space-around;
+.contactRow p {
+  display: flex;
+  justify-content: space-around;
 }
 .contactRow:last-child {
   display: flex;
@@ -102,7 +102,7 @@ justify-content: space-around;
 }
 .ShortBio {
   grid-column: 3 / span 4;
-  grid-row: 6 / span 7;
+  grid-row: 5 / span 6;
 }
 .ShortBio h1 {
   background-color: yellow;
@@ -111,7 +111,29 @@ justify-content: space-around;
 }
 .Education {
   grid-column: 3 / span 4;
-  grid-row: 13 / span 5;
+  grid-row: 11 / span 7;
+}
+.Education h1 {
+  background-color: #001d32;
+  color: yellow;
+  text-align: center;
+}
+.Education p {
+  display: flex;
+  justify-content: space-around;
+}
+.educationImage {
+  width: 90%;
+  margin-right: 5%;
+  height: 11%;
+  border-radius: 1vh;
+  opacity: 0.7;
+}
+.shamsImage {
+  border-radius: 1vh;
+  opacity: 0.7;
+  width: 22%;
+  height: 22%;
 }
 .Expertise {
   grid-column: 7 / span 6;
@@ -128,11 +150,25 @@ justify-content: space-around;
 .SoftwareSkills h2 {
   height: 1vh;
 }
-.charto {
-  width: 33%;
-}
 
+.remote h1 {
+  background-color: yellow;
+  color: #001d32;
+  text-align: center;
+}
 .remote {
   grid-column: 7 / span 6;
   grid-row: 13 / span 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.worldImage {
+  width: 65%;
+  height: 67%;
+  border-radius: 1vh;
+}
+
+.numbero {
+  font-family: Sans;
 }
