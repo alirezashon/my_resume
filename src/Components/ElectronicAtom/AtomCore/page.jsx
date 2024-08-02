@@ -1,6 +1,6 @@
 /** @format */
 
-import { createAnimatedCircle } from '../../AnimatedCircle'
+import { createAnimatedCircle } from '../../AnimatedCircle/page'
 
 export const AtomCore = (svg, width, height, handleFileClick) => {
 	const circleRadius = width * 0.15

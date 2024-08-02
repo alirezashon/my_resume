@@ -2,8 +2,8 @@
 import {useEffect, useRef,useState } from 'react'
 import * as d3 from 'd3'
 import { LightningElectronSVG } from './LightingMood' 
-import { ElectronOrbit } from './ElectronOrbit'
-import { AtomCore } from './AtomCore'
+import { ElectronOrbit } from './ElectronOrbit/page'
+import { AtomCore } from './AtomCore/page'
 
 const ElectronicAtom = () => {
 	const svgRef = useRef(null)
