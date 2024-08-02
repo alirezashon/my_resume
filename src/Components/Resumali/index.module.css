@@ -89,6 +89,7 @@
   color: yellow;
 }
 .personal {
+  line-height: 4vh;
   padding: 1vh;
   grid-column: span 2;
   grid-row: 10 / span 8;
@@ -124,6 +125,7 @@
 }
 .ShortBio p {
   padding: 1vh;
+  line-height: 4vh;
 }
 .Education {
   grid-column: 3 / span 4;
@@ -190,6 +192,9 @@
 }
 
 @media (max-width: 888px) {
+  .container {
+    font-size: 1vh;
+  }
   .body div {
     width: 100%;
   }
@@ -198,10 +203,12 @@
     height: 21vw;
   }
   .expirence {
-    grid-column: span 4;
+    grid-column: span 5;
+    grid-row: 1 / span 12;
   }
   .personal {
-    grid-column: span 4;
+    grid-row: 13 / span 5;
+    grid-column: span 5;
   }
   .ShortBio {
     grid-column: 1 / span 12;
@@ -216,15 +223,15 @@
     grid-row: 22 / span 2;
   }
   .Expertise {
-    grid-column: span 8;
+    grid-column: span 7;
     grid-row: 1 / span 6;
   }
   .SoftwareSkills {
-    grid-column: span 8;
+    grid-column: span 7;
     grid-row: 7 / span 7;
   }
   .remote {
-    grid-column: span 8;
+    grid-column: span 7;
     grid-row: 14 / span 4;
   }
 }
