@@ -9,6 +9,21 @@
   align-items: center;
   color: rgb(255, 60, 0);
 }
+.languageSwitch{
+  display: flex;
+  gap: 1vh;
+}
+.languageSwitch div{
+  background-color: #ffffff;
+  padding:.5vh 1vh;
+  border-radius: 1vh;
+  font-size: 1.3vh;
+  border-block: 1px solid #e5ac51;
+}
+.languageSwitch div:hover,.educationImage:hover,.shamsImage:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
 .header h1 {
   color: #001d32;
 }

@@ -37,6 +37,11 @@ const Resumali = () => {
     <>
       <div className={styles.container}>
         <div className={styles.header}>
+        <div className={styles.languageSwitch}>
+          <div onClick={() => setLanguage('fa')}>فارسی</div>
+          <div onClick={() => setLanguage('en')}>English</div>
+          <div onClick={() => setLanguage('ar')}>العربية</div>
+        </div>
           <h1>{texts.name[language]}</h1>
           <h6>{texts.jobTitle[language]}</h6>
         </div>
@@ -56,13 +61,11 @@ const Resumali = () => {
               <a className={styles.numbero}>4</a>
             </h5>
             <div>
-              به مدت
               <span className={styles.numbero}> 2 </span>
               {texts.years[language]}
             </div>
             <li>{texts.mobinnetJob1[language]}</li>
             <div>
-              به مدت
               <span className={styles.numbero}> 2 </span>
               {texts.years[language]}
             </div>
@@ -181,10 +184,7 @@ const Resumali = () => {
             />
           </div>
         </div>
-        <div className={styles.languageSwitch}>
-          <button onClick={() => setLanguage('fa')}>فارسی</button>
-          <button onClick={() => setLanguage('en')}>English</button>
-        </div>
+       
       </div>
     </>
   )
